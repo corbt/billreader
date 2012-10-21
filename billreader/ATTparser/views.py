@@ -4,7 +4,7 @@ from ATTparser import parser, models
 
 def test(request):
     #reset_db()
-    parser.read_in_bill("alli.csv")
+    parser.read_in_bill("/home/dotcloud/current/billreader/alli.csv")
     
     return HttpResponse("Finished")
 
