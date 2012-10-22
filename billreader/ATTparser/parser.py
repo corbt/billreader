@@ -11,14 +11,10 @@ from django.utils import timezone
 import numberOperations
 from django.core.files import File
 
-def test_data():
-    #TMP variables to be 
-    current_user.bill_object_set.create(billed_number='12344321', time_stamp=timezone.now(), upload_date=timezone.now())
-
 #Parses the entire AT&T-generated CSV bill file and creates a database of calls
 def read_in_bill(csvBill):
     #TMP hard-coding for testing purposes
-    current_user = User.objects.get(username__exact='alli')
+    current_user = User.objects.get(username__exact='vince')
     
     phoneBillCSV = csv.reader(open(csvBill, 'r'))
     
