@@ -6,17 +6,16 @@ Created on Sep 15, 2012
 
 import csv
 from ATTparser.models import Bill_Object
-from django.contrib.auth.models import User
 from django.utils import timezone
 import numberOperations
 from django.core.files import File
+from celery import task
 
 #Parses the entire AT&T-generated CSV bill file and creates a database of calls
-def read_in_bill(csvBill):
-    #TMP hard-coding for testing purposes
-    current_user = User.objects.get(username__exact='vince')
-    
-    phoneBillCSV = csv.reader(open(csvBill, 'r'))
+@task(ignore_result=True)
+def read_in_bill(csvBill, current_user):
+    file=open(csvBill, 'r')
+    phoneBillCSV = csv.reader(file)
     
     currentNumber = 0
     entryType = ''
@@ -41,6 +40,7 @@ def read_in_bill(csvBill):
         
             currentNumber = numberOperations.extractNumber(row[1])
             #if not currentNumber in self._billByNumbers.keys(): self._billByNumbers.update({currentNumber: []})
+    file.close()
 
 #Takes undecoded row of data, identifies entry type and returns the correct bill object
 def parseEntry(row, current_number, entryType, current_user):
@@ -86,7 +86,6 @@ def parseEntry(row, current_number, entryType, current_user):
     else: #unknown data type, mark as such
         #entry = BillObjects.BillObject(currentNumber, row[2], row[3], 'o')
         pass
-    #return entry
 
     
 

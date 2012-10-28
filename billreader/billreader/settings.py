@@ -1,5 +1,10 @@
 # Django settings for billreader project.
 import os
+import json
+import djcelery
+djcelery.setup_loader()
+
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,17 +17,20 @@ ADMINS = (
 MANAGERS = ADMINS
 
 if 'DOTCLOUD_ENVIRONMENT' in os.environ:
-	DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'readerdb',                      # Or path to database file if using sqlite3.
-        'USER': 'reader',                      # Not used with sqlite3.
-        'PASSWORD': 'homecomingvancandy',                  # Not used with sqlite3.
-        'HOST': 'billreader-kyle.azva.dotcloud.net',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '38832',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
-
+	with open('/home/dotcloud/environment.json') as f:
+  		dotcloud_env = json.load(f)
+		DATABASES = {
+		    'default': {
+		        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+		        'NAME': 'readerdb',                      # Or path to database file if using sqlite3.
+		        'USER': dotcloud_env['DOTCLOUD_DB_SQL_LOGIN'],                      # Not used with sqlite3.
+		        'PASSWORD': dotcloud_env['DOTCLOUD_DB_SQL_PASSWORD'],                  # Not used with sqlite3.
+		        'HOST': dotcloud_env['DOTCLOUD_DB_SQL_HOST'],                      # Set to empty string for localhost. Not used with sqlite3.
+		        'PORT': int(dotcloud_env['DOTCLOUD_DB_SQL_PORT']),                      # Set to empty string for default. Not used with sqlite3.
+		    }
+		}
+	
+#Local test settings
 else:
 	DATABASES = {
 	    'default': {
@@ -34,6 +42,8 @@ else:
 	        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
 	    }
 	}
+	#Celery connection to RabbitMQ 
+	BROKER_URL = 'amqp://reader:homecomingvancandy@dev1'
 
 
 
@@ -58,7 +68,7 @@ USE_I18N = True
 USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
-USE_TZ = True
+USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -139,6 +149,7 @@ INSTALLED_APPS = (
     
     #Locally defined apps
     'ATTparser',
+    'djcelery',
 )
 
 # A sample logging configuration. The only tangible logging
