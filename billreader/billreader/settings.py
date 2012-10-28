@@ -29,6 +29,12 @@ if 'DOTCLOUD_ENVIRONMENT' in os.environ:
 		        'PORT': int(dotcloud_env['DOTCLOUD_DB_SQL_PORT']),                      # Set to empty string for default. Not used with sqlite3.
 		    }
 		}
+		#credentials for the RabbitMQ task queue backend
+		BROKER_HOST = dotcloud_env['DOTCLOUD_QUEUE_AMQP_HOST']
+		BROKER_PORT = int(dotcloud_env['DOTCLOUD_QUEUE_AMQP_PORT'])
+		BROKER_USER = dotcloud_env['DOTCLOUD_QUEUE_AMQP_LOGIN']
+		BROKER_PASSWORD = dotcloud_env['DOTCLOUD_QUEUE_AMQP_PASSWORD']
+		BROKER_VHOST = '/'
 	
 #Local test settings
 else:
