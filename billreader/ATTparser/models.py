@@ -27,3 +27,8 @@ class Phone_Call(Bill_Object):
 
 class Data_Transfer(Bill_Object):
     data = models.IntegerField('Data Transfered (KB)')
+    
+def reset_db():
+    Text_Message.objects.all().delete()
+    Phone_Call.objects.all().delete()
+    Data_Transfer.objects.all().delete()

@@ -14,5 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^testdata/$', 'ATTparser.views.test'),
+    url(r'^load/', include('ATTparser.urls')),
+    url(r'^api/', include('api.urls')),
+
 )
