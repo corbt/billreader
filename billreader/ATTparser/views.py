@@ -16,7 +16,7 @@ def loaddata(request, username):
     if 'DOTCLOUD_ENVIRONMENT' in os.environ:
         parser.read_in_bill.delay("/home/dotcloud/current/billreader/"+username+".csv", current_user)
     else:
-        parser.read_in_bill.delay(username+".csv", current_user)
+        parser.read_in_bill.delay("/home/kyle/proj/bill_reader/web/billreader/"+username+".csv", current_user)
 
     #tasks.async_parse.delay("vincebill.csv", current_user)
 

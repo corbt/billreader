@@ -2,6 +2,7 @@
 import os
 import json
 import djcelery
+import tastypie
 djcelery.setup_loader()
 
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
@@ -156,6 +157,7 @@ INSTALLED_APPS = (
     #Locally defined apps
     'ATTparser',
     'djcelery',
+    'tastypie',
 )
 
 # A sample logging configuration. The only tangible logging

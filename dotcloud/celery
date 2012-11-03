@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Starting celery initialization"
 
     cat > $HOME/current/supervisord.conf << EOF
 [program:djcelery]

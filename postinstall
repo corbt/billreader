@@ -1,7 +1,10 @@
 #!/bin/sh
 
-${PWD}/dotcloud/django
+echo "Starting the postinstall"
+./dotcloud/django
+./billreader/manage.py syncdb
+echo "Databases synced"
 
 if [ $DOTCLOUD_SERVICE_NAME = workers ] ; then
-    ${PWD}/dotcloud/celery
+    ./dotcloud/celery
 fi

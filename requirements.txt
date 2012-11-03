@@ -2,3 +2,4 @@ django==1.4
 django-celery
 django-piston
 setproctitle
+oauth2
