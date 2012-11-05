@@ -28,6 +28,11 @@ class Phone_Call(Bill_Object):
 class Data_Transfer(Bill_Object):
     data = models.IntegerField('Data Transfered (KB)')
     
+class ATT_user(models.Model):
+    user=models.OneToOneField(User, primary_key=True)
+    att_number=models.CharField('Account phone number', max_length=20)
+    att_pw = models.CharField('Account password', max_length=20)
+    
 def reset_db():
     Text_Message.objects.all().delete()
     Phone_Call.objects.all().delete()

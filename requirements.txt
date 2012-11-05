@@ -1,5 +1,5 @@
 django==1.4
 django-celery
-django-piston
+django-tastypie
 setproctitle
 oauth2
