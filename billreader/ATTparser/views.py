@@ -6,7 +6,7 @@ from ATTparser import tasks
 import os
 
 def loaddata(request, username):
-    models.reset_db()
+    #models.reset_db()
     try:
         current_user = User.objects.get(username__exact=username)
     except User.DoesNotExist:
