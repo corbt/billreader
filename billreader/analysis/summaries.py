@@ -1,4 +1,5 @@
 from ATTparser.models import Phone_Call, Text_Message, Data_Transfer
+from django.db import models
 
 def get_lines(user):
     phone_lines=Phone_Call.objects.filter(billed_user=user).values_list('billed_number', flat=True).distinct()
@@ -15,3 +16,14 @@ def get_lines(user):
         
     return list(lines)
     
+def get_top_calls(user, billed_number, start=0, records=0):
+    top_calls = Phone_Call.objects.filter(billed_user=user
+      ).filter(billed_number=billed_number
+      ).values('other_number').annotate(c=models.Count('other_number')
+      ).order_by('-c'
+      )[start:]
+    
+    for i, call in enumerate(top_calls):
+        call['n']=i
+      
+    return top_calls

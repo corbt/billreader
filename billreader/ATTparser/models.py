@@ -23,6 +23,8 @@ class Phone_Call(Bill_Object):
     incoming = models.BooleanField('Incoming Call')
     duration = models.IntegerField('Call Duration (min)')
     other_number = models.CharField('Number Calling', max_length=20)
+    def __unicode__(self):
+        return "%s Other: %s" % (Bill_Object.__unicode__(self), self.other_number)
 
 
 class Data_Transfer(Bill_Object):

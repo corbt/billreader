@@ -1,2 +1,0 @@
-ERROR: Pidfile (celeryev.pid) already exists.
-Seems we're already running? (pid: 4341)

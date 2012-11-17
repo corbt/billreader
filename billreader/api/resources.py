@@ -5,7 +5,7 @@ from tastypie.authorization import Authorization, ReadOnlyAuthorization
 from tastypie import fields
 from django.contrib.auth.models import User
 from ATTparser.models import ATT_user, Phone_Call
-from analysis.summaries import get_lines
+from analysis.summaries import get_lines, get_top_calls
 
 v1_api = Api(api_name='v1')
 
@@ -56,46 +56,44 @@ class PlanLinesResource(Resource):
             results.append(new_line)
         return results
 
-        return results
     def obj_get_list(self, request=None, **kwargs):
         return self.get_object_list(request)
     def obj_get(self, request=None, **kwargs):
         return self.get_object_list(request)
 v1_api.register(PlanLinesResource())
     
-
-
-class LinesResource(ModelResource):
-    #user = fields.ForeignKey(UserResource, 'billed_user')
-    astring='a string!'
-    nums=set()
+class CallObject(object):
+    number=''
+    calls=0
+    
+class TopCallsResource(Resource):
+    number=fields.CharField(attribute='number')
+    calls=fields.IntegerField(attribute='calls')
     
     class Meta:
-        queryset = Phone_Call.objects.all()
-        authorization = Authorization()
+        object_class=CallObject
+        authorization = ReadOnlyAuthorization()
         authentication = BasicAuthentication()
-        fields=['billed_number']#['billed_number','other_number']
-        include_resource_uri=False
-        limit=0
-    
-    def apply_authorization_limits(self, request, object_list):
-        return object_list.filter(billed_user=request.user)#.values('billed_number').distinct()
-    #def get_object_list(self, request):
-    #    return super(PlanLinesResource, self).get_object_list(request).#filter(billed_number__exact='7039993230')
-    
-    def dehydrate_billed_number(self, bundle):
-        self.nums.add(bundle.data['billed_number'])
-        #return bundle.data['billed_number']
-    
+        limit=5
+        allowed_methods=['get']
+    def detail_uri_kwargs(self, bundle_or_obj):
+        #TODO make this URL enabled, connect it to the detailed view
+        return {}
 
-    def dehydrate(self, bundle):
-        bundle.data={'mynums':tuple(self.nums)};
-        self.numbers=self.nums
-        return bundle
-v1_api.register(LinesResource())
-        
-
-
+    def get_object_list(self, request):
+        calls=get_top_calls(user=request.user, billed_number=request.GET.get('line'))
+        results=[]
+        for caller in calls:
+            caller_obj = CallObject()
+            caller_obj.calls=caller['c']
+            caller_obj.number=caller['other_number']
+            results.append(caller_obj)
+        return results
+    def obj_get_list(self, request=None, **kwargs):
+        return self.get_object_list(request)
+    def obj_get(self, request=None, **kwargs):
+        return self.get_object_list(request)
+v1_api.register(TopCallsResource())
 
 
 
