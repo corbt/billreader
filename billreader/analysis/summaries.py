@@ -16,14 +16,12 @@ def get_lines(user):
         
     return list(lines)
     
-def get_top_calls(user, billed_number, start=0, records=0):
+
+def get_top_calls(user, billed_number):
     top_calls = Phone_Call.objects.filter(billed_user=user
       ).filter(billed_number=billed_number
       ).values('other_number').annotate(c=models.Count('other_number')
-      ).order_by('-c'
-      )[start:]
-    
-    for i, call in enumerate(top_calls):
-        call['n']=i
+      ).order_by('-c')
+      #TODO: filter by date as well
       
     return top_calls

@@ -6,6 +6,8 @@ from tastypie import fields
 from django.contrib.auth.models import User
 from ATTparser.models import ATT_user, Phone_Call
 from analysis.summaries import get_lines, get_top_calls
+from analysis.history import get_full_history
+import datetime
 
 v1_api = Api(api_name='v1')
 
@@ -95,6 +97,39 @@ class TopCallsResource(Resource):
         return self.get_object_list(request)
 v1_api.register(TopCallsResource())
 
+class HistoryObject(object):
+    time=datetime.datetime
+    type=''
+    incoming=False
 
-
+class ContactHistoryResource(Resource):
+    time=fields.DateTimeField(attribute='time')
+    type=fields.CharField(attribute='type')
+    incoming=fields.BooleanField(attribute='incoming')
+    
+    class Meta:
+        object_class=HistoryObject
+        authorization=ReadOnlyAuthorization()
+        authentication=BasicAuthentication()
+        include_resource_uri=False
+        allowed_methods=['get']
+    def detail_uri_kwargs(self, bundle_or_obj):
+        #TODO make this URL enabled
+        return {}
+    def get_object_list(self, request):
+        history=get_full_history(request.user,request.GET.get('line'), request.GET.get('other_number'))
+        results=[]
+        for item in history:
+            story=HistoryObject()
+            story.time=item['time']
+            story.type=item['type']
+            story.incoming=item['incoming']
+            results.append(story)
+        return results
+    def obj_get_list(self, request=None, **kwargs):
+        return self.get_object_list(request)
+    def obj_get(self, request=None, **kwargs):
+        return self.get_object_list(request)
+v1_api.register(ContactHistoryResource())
+            
 
