@@ -1,10 +1,18 @@
 #!/bin/sh
 
 echo "Starting the postinstall"
+
+
+#Run the django setup script.  This is necessary on both the www and workers services
 ./dotcloud/django
 ./billreader/manage.py syncdb
 echo "Databases synced"
-
+#www-specific installation
+if [ $DOTCLOUD_SERVICE_NAME = www ] ; then
+    echo "Creating data/ directory structure if necessary"
+    mkdir -p /home/dotcloud/data/userdata/
+fi
+#celery worker-specific installation
 if [ $DOTCLOUD_SERVICE_NAME = workers ] ; then
     ./dotcloud/celery
 fi
