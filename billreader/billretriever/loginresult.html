@@ -26,18 +26,18 @@
 
 
 
+
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-	 <title>AT&T</title>
-	
-	
-	
-	
-	
 	<title>AT&T</title>
+  	<title>AT&T</title>
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Cache-Control" content="no-cache='set-cookie', no-store" />
 	<meta http-equiv="Expires" content="-1" />
@@ -53,21 +53,35 @@
 	<!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><![endif]-->
 
 	
-	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="//www.att.com/styles/global-ie7.css" media="screen, projection, print" /><![endif]-->
-	<!--[if IE 6]>
-	<link rel="stylesheet" type="text/css" href="//www.att.com/styles/global-ie6.css" media="screen, projection, print" />
-	<link rel="stylesheet" href="//www.att.com/styles/gbl_ie.css" type="text/css" />
-	<![endif]-->
+	
+		
+			<!--[if IE 7]>
+				<link rel="stylesheet" type="text/css" href="//www.att.com/styles/global-ie7.css" media="screen, projection, print" />
+			<![endif]-->
+			<!--[if IE 6]>
+				<link rel="stylesheet" type="text/css" href="//www.att.com/styles/global-ie6.css" media="screen, projection, print" />
+				<link rel="stylesheet" href="//www.att.com/styles/gbl_ie.css" type="text/css" />
+			<![endif]-->
+			<link rel="stylesheet" type="text/css" href="//www.att.com/styles/print.css" media="print" />
+		
+		
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="//www.att.com/styles/print.css" media="print" />
 	
 	
-	<link rel="stylesheet" type="text/css" href="//www.att.com/styles/print.css" media="print" />
+		<link rel="stylesheet" type="text/css" href="/olam/css/myatt-services.css" media="screen, projection, print" />	
+		
+			
+			
+				<link rel="stylesheet" type="text/css" href="/olam/css/myatt-dashboard.css" media="screen, projection, print" />
+			
+			
 	
 	
-		<link rel="stylesheet" type="text/css" href="/olam/css/myatt-services.css" media="screen, projection, print" />		
-	 	<link rel="stylesheet" type="text/css" href="/olam/css/myatt-dashboard.css" media="screen, projection, print" />
 	
-	
-	
+		
 
 
 
@@ -76,12 +90,37 @@
 </style>
 <script type="text/javascript" src="//www.att.com/media/gvp/gvpUtils.js"></script>
 	
+		
 	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 	
 	
 	
 	
+
+		
+		
 
 		
 			<script type="text/javascript" src="/olam/js/prototype.js"></script>
@@ -294,7 +333,7 @@ function openPopUpManageFeatures(){
 
 	
 	
-		<body id='top' onload="javascript:triggerSessionTimoutTimer()" class="extend3o dashboardModal ">
+		<body id='top' onload="javascript:triggerSessionTimoutTimer()" class="extend3o ">
 	
 	<!--BACKGROUND POPUP-->
 	
@@ -830,41 +869,43 @@ return true;
  
 
 
-
-
-
-
-
-
-
-	<script type="text/javascript" src="//www.att.com/scripts/foresee_global/foresee-trigger-global.js"></script>
+	
+	
 		
-		<script type="text/javascript">ForeSee.CPPS.fsr$set('ctn','8013680555')</script>
-	
-	<script type="text/javascript">ForeSee.CPPS.fsr$set('customer_type','current')</script>
-	
-	
-	
+		
+		
+		
+		
+		
+		
+			<script type="text/javascript" src="//www.att.com/scripts/foresee_global/foresee-trigger-global.js"></script>
+				
+				<script type="text/javascript">ForeSee.CPPS.fsr$set('ctn','8013680555')</script>
+			
+			<script type="text/javascript">ForeSee.CPPS.fsr$set('customer_type','current')</script>
+			
+			
+			
+							
 					
+				
+						
+				
+				
+						
+				
+			
+			
+			
+			
+				<script type="text/javascript">
+					var user_type="W";
+					ForeSee.CPPS.fsr$set('user_type','W');
+				</script>
+			
 			
 		
-				
-		
-		
-				
-		
 	
-	
-	
-	
-		<script type="text/javascript">
-			var user_type="W";
-			ForeSee.CPPS.fsr$set('user_type','W');
-		</script>
-	
-	
-
-
 <!-- GLOBAL NAV -->
 
 		<div id="globalNav">
@@ -875,12 +916,17 @@ return true;
 
 
 
+
 <!-- Page Name = [Dashboard] isGNDisabled false disableGN false-->
 	<div id="globalNavInterface">
-		<div id="segMenuBar"><div id="stub">&nbsp;</div></div>
-		<div id="globalNavUserInfo"></div>
+	<!-- Added check to hide or not to display the Segment menu bar if user is coming through WG env -->
+		
+			<div id="segMenuBar"><div id="stub">&nbsp;</div></div>
+			<div id="globalNavUserInfo"></div>
 		
 		
+		
+			
 		<div id="tieredNav">
 			<div id="primaryMenu">
 				<ul>
@@ -981,45 +1027,45 @@ jQuery(document).ready(function() {
 
 
 
-<!--This gives you access to the ATG User Profile-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script language="javascript">
-jQuery(document).ready(function() {
-	jQuery("a.openModalCart").click(function(){
-	modalURL = jQuery(this).attr('href');
-	jQuery.colorbox({iframe:true, height:350, width:670, scrolling:false, href: modalURL});
-	return false;
-	});
-	jQuery("form.openModalCart").click(function(){
-		modalURL = jQuery(this).attr('action');
-		jQuery.colorbox({iframe:true, height:350, width:800, scrolling:false, href: modalURL});
+	
+	
+	<!--This gives you access to the ATG User Profile-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script language="javascript">
+	jQuery(document).ready(function() {
+		jQuery("a.openModalCart").click(function(){
+		modalURL = jQuery(this).attr('href');
+		jQuery.colorbox({iframe:true, height:350, width:670, scrolling:false, href: modalURL});
 		return false;
 		});
-	});
-
-</script>
-
-
-
-
-
-
-
-
+		jQuery("form.openModalCart").click(function(){
+			modalURL = jQuery(this).attr('action');
+			jQuery.colorbox({iframe:true, height:350, width:800, scrolling:false, href: modalURL});
+			return false;
+			});
+		});
+	
+	</script>
+	
+	
+	
+	
+	
+	
 
 			 <div class=''></div>
 					<div class=''>
@@ -1067,6 +1113,8 @@ jQuery(document).ready(function() {
 
 
 
+
+
  
 
 
@@ -1088,13 +1136,13 @@ jQuery(document).ready(function() {
                                 jQuery('div.box').each(function(){
                                                 if(jQuery(this).hasClass('shadowLeft')){
                                                                 var boxWidth = jQuery(this).width();
-                                                                var botWidth = boxWidth - 18;
-                                                                var topWidth = boxWidth - 16;
+                                                                var botWidth = boxWidth - 12;
+                                                                var topWidth = boxWidth - 12;
 jQuery(this).parent().prepend('<div style="top:0px" class="shadowTopLeft"><div style="width:'+topWidth+'px;"><div class="shadowTop" style="width:'+topWidth+'px;"></div></div></div>');
 
                                                                 jQuery(this).parent().append('<div class="shadowBotLeft"><div style="width:'+botWidth+'px;"><div class="shadowBottom" style="width:'+botWidth+'px;"></div></div></div>');
-
-jQuery(this).find('div').children(".section-title").css('border','none').css('background','url("//www.att.com/Common/indc/images/global/grad-heading.png") repeat-x scroll 0 100% #F5F5F5').css('width', '966px').css('left', '4px');
+                                                                jQuery(this).children(".shadowRight").css('width', '980px');
+jQuery(this).find('div').children(".section-title").css('border','none').css('background','url("//www.att.com/Common/indc/images/global/grad-heading.png") repeat-x scroll 0 100% #F5F5F5').css('width', '971px').css('left', '4px');
                                                                 
                                                                 if(jQuery(this).find("div").hasClass('topRound'))
                                                                 {
@@ -1125,14 +1173,14 @@ jQuery(this).find('div').children(".section-title").css('border','none').css('ba
                                                                 jQuery(this).find('div.section-title').css('-moz-border-radius-topright','0px');
                                                                 jQuery(this).find('div.section-title').css('border-top-left-radius','0px');
                                                                 jQuery(this).find('div.section-title').css('border-top-right-radius','0px');
-                                                                var botWidth = boxWidth - 20;
-                                                                var topWidth = boxWidth - 18;
+                                                                var botWidth = boxWidth - 14;
+                                                                var topWidth = boxWidth - 14;
                                                                 
 jQuery(this).parent().prepend('<div style="top:0px" class="shadowTopLeft"><div style="width:'+topWidth+'px;"><div class="shadowTop" style="width:'+topWidth+'px;"></div></div></div>');
                                                                 
                                                                 jQuery('<div class="shadowBotLeft"><div style="width:'+botWidth+'px;"><div class="shadowBottom" style="width:'+botWidth+'px;"></div></div></div>').insertAfter(this);
 
-jQuery(this).find('div').children(".section-title").css('border','none').css('background','url("//www.att.com/Common/indc/images/global/grad-heading.png") repeat-x scroll 0 100% #F5F5F5').css('width', '966px').css('left', '4px');
+jQuery(this).find('div').children(".section-title").css('border','none').css('background','url("//www.att.com/Common/indc/images/global/grad-heading.png") repeat-x scroll 0 100% #F5F5F5').css('width', '970px').css('left', '-1px');
                                 }
                                 });
                                 jQuery('div.section-title, div.box').each(function(){
@@ -1148,15 +1196,41 @@ jQuery(this).find('div').children(".section-title").css('border','none').css('ba
 jQuery(document).ready(function() {
 	jQuery("a.openModal").click(function(){
 		modalURL = jQuery(this).attr('href');
-		jQuery.colorbox({iframe:true, height:400, width:600, scrolling:false, href: modalURL});
+		jQuery.colorbox({iframe:true, height:400, width:600, scrolling:false, href: modalURL, close:""});
 		return false;
 	});
 	jQuery("form.openModal").click(function(){
 		modalURL = jQuery(this).attr('action');
-		jQuery.colorbox({iframe:true, height:600, width:800, scrolling:false, href: modalURL});
-		return true;
+		jQuery.colorbox({iframe:true, height:600, width:800, scrolling:false, href: modalURL, close:""});
+		return false;
 	});	
 		
+});
+
+jQuery(window).load(function() {
+
+	jQuery(".mybilldiv .shadowRight").each(function(){	
+		var rightDivHeight = 0;
+		var leftDivHeight = 0;
+		rightDivHeight = jQuery(this).children(".w640Mar14").children("div:first-child").outerHeight();		
+		leftDivHeight = jQuery(this).children("div").find(".AcctMyBill ").outerHeight();
+		if(rightDivHeight > leftDivHeight)
+		{
+			if (jQuery.browser.msie){
+				jQuery(this).children("div").find(".AcctMyBill").height(rightDivHeight-38);
+			}
+			else{
+				jQuery(this).children("div").find(".AcctMyBill").height(rightDivHeight-30);
+			}
+		}
+		else{
+			jQuery(this).children(".w640Mar14").children("div:first-child").addClass("height117");
+			if (jQuery.browser.msie){
+				jQuery(this).children(".w640Mar14").children("div:first-child").css("height", "125px");
+			}			
+		}
+	});
+
 });
 </script>
 
@@ -1167,10 +1241,10 @@ jQuery(document).ready(function() {
 
 <!-- Login/Bill and Payment Module -->
 <div id="new_Account_Overview" class="botMar0 Padbot0">
-	<div class="box mybilldiv shadowLeft">
+	<div class="box mybilldiv shadowLeft botMar5">
 		<div class="shadowRight">
 			<!-- Include Billing and Payment Section -->
-			
+				
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
@@ -1217,10 +1291,10 @@ jQuery(document).ready(function() {
 						
 						
 							
-							
-								<span class="colorOrange font30imp">
+								<span class="colorRed font30imp">
 									$105.33
 								</span>
+							
 							
 						
 					</td>
@@ -1229,7 +1303,7 @@ jQuery(document).ready(function() {
 					
 						<td class="center vtop">
 						<div class="Marbot5">
-							<a title="Make a Payment" href="/pmt/setupQuickPay.doview?reportActionEvent=A_PMT_QUICK_PAY_SETUP&reportActionForm=commonPaymentForm">
+							<a class="posStatic" title="Make a Payment" href="/pmt/setupQuickPay.doview?reportActionEvent=A_PMT_QUICK_PAY_SETUP&reportActionForm=commonPaymentForm">
 								<img src="/olam/English/brand30/bt/btnMakePayment_142.png" alt="Make a Payment" style="display:block;">
 							</a>
 							</div>
@@ -1242,14 +1316,15 @@ jQuery(document).ready(function() {
 							<tbody>
 								<tr>
 									<td class="PadBot10 font14 colorGrey " style="width:67%">
-										as of 11/09/2012
+										as of 11/19/2012
 									</td>
 									<td class="right PadBot10 font14" style="width:33%">
-										<a href="/view/billSummary.do?caller=DB&reportActionEvent=A_VB_VIEW_BILL_DETAILS">
+										<a class="posStatic" href="/view/billSummary.do?caller=DB&reportActionEvent=A_VB_VIEW_BILL_DETAILS">
 											View bill details
 										</a>
 									</td>
 								</tr>
+								
 							</tbody>
 						</table>
 					</td>
@@ -1258,16 +1333,18 @@ jQuery(document).ready(function() {
 					
 						<td class="vtop" align="center">
 							
-							
-							
 								
-									<div class="colorOrange font14 fontWeightBoldForce MarTop5 Marbot5">
-										3 day(s) left to pay
+									<div class="colorRed lineHeight15 font14 fontWeightBoldForce MarTop5 Marbot5">
+										<span class="overage"></span>
+										Payment past due
+									</div>
+									<div class="colorRed font12 fontWeightBoldForce">
+										Please pay now
 									</div>
 								
-								<div class="font12 fontWeightBoldForce">
-									Due on 11/11/2012
-								</div>
+								
+							
+							
 							
 						</td>
 					
@@ -1280,13 +1357,14 @@ jQuery(document).ready(function() {
 	<div class="padTop0">
 		<p class="inline-links noAllborder ForcePadbot5">
 			<span class="padtopbot0 rel normal">
-			<a class="MarRight5" href="/view/paperless.doview?selectedBAN=265030279423">Manage paperless billing</a>|<a href="/pmt/setupRecurringPayment.do">Enroll in AutoPay</a>
+				<a class="MarRight5" href="/view/paperless.doview?selectedBAN=265030279423">Manage paperless billing</a>|<a class="MarRight5" href="/pmt/setupRecurringPayment.do">Enroll in AutoPay</a>
 			</span>
 		</p>
 	</div>
 	
 
 </div>
+
 
 		
 			<!-- Include Account Section -->
@@ -1308,6 +1386,8 @@ jQuery(document).ready(function() {
 
 
  
+
+
 
 
 
@@ -1408,19 +1488,31 @@ jQuery(document).ready(function() {
 	});
 	
 	//Used for new DB promo dispaly
-	try{
+	try {
 		var showDBPromo = false;
 		var isDBPromoDisplayed = false;
+		var showPBOPromo = false;
+		
 		if (showDBPromo && !isDBPromoDisplayed) {
 			jQuery(document).ready(function (){   
 			 	jQuery(window).bind("load", function () {  
 			 		modalURL = "/olam/dbPromoModalWirelessDashboardAction.myworld";
-					jQuery.colorbox({iframe:true, height:530, width:850, scrolling:false, href: modalURL}); 
+					jQuery.colorbox({iframe:true, height:530, width:850, scrolling:false, href: modalURL, close:""}); 
 					return false;
 				 });   
 			}); 
+		} else if (showPBOPromo) { 
+			jQuery(document).ready(function () {   
+				jQuery(window).bind("load", function () {
+				modalURL = "/olam/jsp/dashboard/dashboardPBOPromoModal.jsp";
+				jQuery.colorbox({iframe:true, height:530, width:850, scrolling:false, href: modalURL, close:"", overlayClose:false}); 
+				return false;
+				});   
+			}); 
 		}
-	}catch(e){}
+	} catch (e) {
+		
+	}
 </script>
 
 
@@ -1595,9 +1687,7 @@ jQuery(document).ready(function() {
 	
 	</div>
 </div> 
-<div class="ClearNew"></div>	
-
-
+<div class="ClearNew"></div>
 		</div>
 	</div>
 </div>
@@ -1646,9 +1736,64 @@ jQuery(document).ready(function() {
 
 
 
+
+<script type="text/javascript">
+	function processUpgradeCtnList(csv) 
+	{
+		jQuery(csv.split(",")).each( function(index, item) {
+			var ctn = item;
+			var eligDate = null;
+			var idx = item.indexOf("|");
+			
+			var eligId = "";
+			var eligNoteId = "";
+			var upgId = "";
+			
+			if (-1 < idx) {
+				ctn = item.substring(0,idx);
+				eligDate = item.substring(idx+1);
+				
+				if (null != ctn && null != eligDate && jQuery("#eligibilityCountdownNote").length) {
+				
+					var note = jQuery("#eligibilityCountdownNote").html();
+					var newNote = note.replace('DDD', eligDate);
+					
+					eligId = "#Device_Elig_" + ctn;
+					eligNoteId = "#Device_EligNote_" + ctn;
+					upgId = "#Device_Upgrade_" + ctn;
+					
+					if (jQuery(eligId).length && jQuery(eligNoteId).length) {
+						jQuery(eligNoteId).html(newNote);
+						jQuery(eligId).show();
+						
+						if (jQuery(upgId).length) {
+							jQuery(upgId).hide();
+						}
+					}
+				}
+			
+			} else {
+			
+				if (null != ctn) {
+					upgId = "#Device_Upgrade_" + ctn;
+					eligId = "#Device_Elig_" + ctn;
+			
+					if (jQuery(upgId).length) { 
+						jQuery(upgId).show();
+						
+						if (jQuery(eligId).length) {
+							jQuery(eligId).hide()
+						}
+					}
+				}
+			}
+		});
+	}
+</script>
+
 <!-- Service/Usage Summary Module -->
-<div id="servicecontent" class="sprintContent botMar0">
-	<div class="box shadowLeft">
+<div id="servicecontent" class="sprintContent botMar0 ie7noPad">
+	<div class="box shadowLeft botMar5">
 		<div class="shadowRight">
 			
 				
@@ -1681,13 +1826,13 @@ jQuery(document).ready(function() {
 
 <script type="text/javascript">
 	doSectionUpdateOnPageLoad( "planType=SinglePlan", ModuleName.ALERTS, true, "singleplan" );
-	doSectionUpdateOnPageLoad( "", ModuleName.CheckUpgrade, true, "" );
+	doSectionUpdateOnPageLoad( "", ModuleName.CheckUpgrade, true, "singleplan" );
 </script>
 
 <!-- Single Plan Module -->
 		<div class="section-title">
-			<div class="w290 MarBot0" style="background: url(../olam/images/brand30/secondary_nav_divider.gif) no-repeat scroll right center transparent;">
-				<h2 style="margin:0 10px 0 19px;">
+			<div class="w291 MarBot0" style="background: url(../olam/images/brand30/secondary_nav_divider.gif) no-repeat scroll right center transparent;">
+				<h2 style="margin:0 10px 0 19px;" class="font18Force">
 					Alerts
 				</h2>
 			</div>
@@ -1698,7 +1843,7 @@ jQuery(document).ready(function() {
 				
 					<ul>
 						<li>
-							<a id="cplink" class="wt_Body" href='/olam/changeRatePlanFlow.myworld?newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555'>
+							<a id="cplink" class="top4px rel wt_Body" href='/olam/changeRatePlanFlow.myworld?newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555'>
 								Change plan
 							</a>
 						</li>
@@ -1710,7 +1855,10 @@ jQuery(document).ready(function() {
 			<!-- Alerts Container -->
 			<div id="tabDiv" class="alertDiv float-left">
 				<div id="alertSection" class="tab-container">
+				</div>
+				<div id="alertTimeout" class="tab-container" style="display:none">
 					
+
 
 
 
@@ -1731,10 +1879,23 @@ jQuery(document).ready(function() {
 
 
 
-<div class="MarTop30 MarLeft85 MarRight100 colorGrey">
-	<div class="noalerts w140" title="No Alerts"></div>
+<div class="alerts">
+	<ul id ="alert1">
+		<li class="noFloat BotSolidBorder PadLeft8 MarTop10">
+			<div class="ClearNew"></div>
+			<div class="alert-overage" alt="">
+				<div class="MarLeft10">
+					<span class="colorBlack fontWeightBoldForce font13">
+						<strong>Alerts Currently Unavailable</strong>
+					</span><br />
+					<span class="colorBlack font13">
+						Please refresh your browser.
+					</span>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
-
 				</div>
 			</div>
 			<!-- /Alerts Container -->
@@ -1778,7 +1939,7 @@ jQuery(document).ready(function() {
 			var minutesPercent = (minutesUsed/totalMinutes) * 100;
 			var percentVal = "width:" + minutesPercent + "%";
 			
-			if(minutesPercent < 6 && minutesPercent > 0){
+			if(minutesPercent < 7 && minutesPercent > 0){ //changed from 6 to 7 as per ITHTML suggestion - ticket - 6355 
 				if (jQuery(this).find('.meter-value').length){
 					jQuery(this).find('.meter-value').attr('style','width:13px');
 				} else {
@@ -1842,15 +2003,21 @@ jQuery(document).ready(function() {
 			var singleDashStatus = jQuery(this).find('.singleDashMeterStatus').html();
 			if(null != singleDashStatus && singleDashStatus == "alert"){
 				// red icon and alert status bar
-				jQuery(this).find('.alertUsageIcon').addClass('MarLeft5 overage padTop2');
+				jQuery(this).find('.alertUsageIcon').addClass('overage MarLeft2 float-left top-2px').html('&nbsp;');
+				jQuery(this).find('.meter-container-10').addClass('meter-container-10-sm-208');
+				jQuery(this).find('.meter-container-10').removeClass('meter-container-10');
 			} else if (null != singleDashStatus && singleDashStatus == "warning"){
 				// yellow icon and normal status bar
-				jQuery(this).find('.alertUsageIcon').addClass('MarLeft5 caution padTop2');
+				jQuery(this).find('.alertUsageIcon').addClass('caution MarLeft2 float-left top-2px').html('&nbsp;');
+				jQuery(this).find('.meter-container-10').addClass('meter-container-10-sm-208');
+				jQuery(this).find('.meter-container-10').removeClass('meter-container-10');
 			} else {
 				// Default status is normal
 				if (jQuery(this).find('.singleDashMeterStatus.usingRollover').length){
 					// yellow icon and normal status bar
-					jQuery(this).find('.alertUsageIcon').addClass('MarLeft5 caution padTop2');
+					jQuery(this).find('.alertUsageIcon').addClass('caution MarLeft2 float-left top-2px').html('&nbsp;');
+					jQuery(this).find('.meter-container-10').addClass('meter-container-10-sm-208');
+					jQuery(this).find('.meter-container-10').removeClass('meter-container-10');
 				}
 			}
 			/* End : Single Plan Usage for alert status and icons on the dashboard */
@@ -1859,17 +2026,17 @@ jQuery(document).ready(function() {
 			var dashStatus = jQuery(this).find('.dashAlertStatus').html();
 			if(null != dashStatus && dashStatus == "alert"){
 				// red icon and alert status bar
-				jQuery(this).find('#dashMeterStatus').addClass('meter-container-10-sm-160');
+				jQuery(this).find('#dashMeterStatus').addClass('meter-container-10-sm-150');
 				jQuery(this).find('#dashAlertIcon').addClass('overage MarLeft2 float-left top-2px').html('&nbsp;');
 			} else if (null != dashStatus && dashStatus == "warning"){
 				// yellow icon and warning status bar
-				jQuery(this).find('#dashMeterStatus').addClass('meter-container-10-sm-160');
+				jQuery(this).find('#dashMeterStatus').addClass('meter-container-10-sm-150');
 				jQuery(this).find('#dashAlertIcon').addClass('caution MarLeft2 float-left top-2px').html('&nbsp;');
 			} else {
 				// Default status is normal
 				if (jQuery(this).find('.dashAlertStatus.usingRollover').length){
 					// yellow icon and normal status bar
-					jQuery(this).find('#dashMeterStatus').addClass('meter-container-10-sm-160');
+					jQuery(this).find('#dashMeterStatus').addClass('meter-container-10-sm-150');
 					jQuery(this).find('#dashAlertIcon').addClass('caution MarLeft2 float-left top-2px').html('&nbsp;');
 				} else {
 					// no icon and normal status bar
@@ -1978,20 +2145,35 @@ jQuery(document).ready(function() {
 </script>
 
 <script language="JavaScript" type="text/JavaScript">
-	jQuery(document).ready(function() {
+	/* jQuery(document).ready(function() {
        var wid = jQuery('.wraptext').width();
        if(wid >= 75)
        {
            jQuery('.wraptext').addClass('w148 lineHeight18');
        }
+	}); */
+	
+	jQuery(document).ready(function() {
+		resetClassesForBadges();
 	});
+	
+	function resetClassesForBadges() {
+		jQuery('div.phoneItem').each(function(){
+			var badgeImg = jQuery(this).find('.deviceBadge').children('img').attr('src');
+			if (null != badgeImg && jQuery(this).find('#IndDeviceDiv').hasClass('MarTop6')) {
+				jQuery(this).find('#IndDeviceDiv').removeClass('MarTop6 padTop0');
+				jQuery(this).find('#IndDeviceDiv').addClass('MarTopNeg24 padTop0');
+			}
+		});
+	}
+	
 </script>
 
 
 <div class="PadBot10">
-<div class="PadLeft18 PadBot0 PadRight10imp">	
-<div class="usageLeft ">
-	<div class="minHt75">
+<div class="PadLeft18 PadBot0">	
+<div class="usageLeft">
+	<div class="minHt75 PadTop5">
 		<h4 class="font16">
 			
 				Derek&nbsp;
@@ -1999,33 +2181,42 @@ jQuery(document).ready(function() {
 			801-368-0555
 			
 		</h4>
-		<div class="MarTop6 padTop0">
+		<div class="MarTop4 padTop0">
 			<a class="wt_Body" href="/olam/displayUsageLanding.myworld?reportActionEvent=A_UMD_CURRENT_USAGE_SUMMARY&selectedBAN=265030279423&selectedCTN=8013680555&newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555" title="" class="font14">View all usage</a>
 		</div>
 	</div>
-	<div class="PadTop0 MarTop0">
-		<div class="center phoneItem float-left">
+	<div class="PadTop0 MarTop0 PadLeft18">
+		<div class="center phoneItem float-left PadRight50">
 			
 			
 			
+			
+			<span style="display: none;" id="eligibilityCountdownNote">Eligible for upgrade DDD</span>
 
-			<img src="https://www.wireless.att.com/catalog/en/skus/images/ed/apple-iphone%204s-100x110.jpg" alt="Phone 1" style="width: 100px; height: 110px"  /><span id="Badge_8013680555"><img src="/olam/images/brand30/alert_icon_overage_25.png" alt="Important alert" style="position:relative; left:27px; top:-118px;" /></span>
-			<div class="MarTop6 padTop0">
+			<img src="https://www.wireless.att.com/catalog/en/skus/images/ed/apple-iphone%204s-100x110.jpg" alt="Phone 1" style="width: 100px; height: 110px"  /><span class="deviceBadge" id="Badge_8013680555"></span>
+			<div class="MarTop6 padTop0" id="IndDeviceDiv">
 				<p class="botMar0">
 					Apple iPhone 4S
 					
 				</p>
 			</div>
-			<div class="MarTop6 nowrap">
+			<div class="MarTop6 w110">
 			
 			
 				<a href="/olam/redirectToInternalURL.myworld?newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555&redirectURL=%2Folam%2FtutorialSupportAction.olamexecute%3Fevent%3DdisplayTutorialsLandingScreen">View device tutorial</a>
 			
 			</div>
-			<div class="center padtopbot0 rel normal top1px" style="display: none;" id="Device_Upgrade_8013680555">
-				<a class="upgradeSM" title="Upgrade Eligable" href="/olam/redirectToInternalURL.myworld?newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555&redirectURL=%2Folam%2FugPhoneAction.olamexecute%3Fevent%3DupgradePhone%26reportActionEvent%3DA_PHON_UG_PHONE_RETR">
-				Upgrade now
+			<div class="MarTop12 center padtopbot0 rel normal" style="display: none;" id="Device_Upgrade_8013680555">
+				<a class="upgradeSM" title="Upgrade Eligible" href="/olam/redirectToInternalURL.myworld?newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555&redirectURL=%2Folam%2FugPhoneAction.olamexecute%3Fevent%3DupgradePhone%26reportActionEvent%3DA_PHON_UG_PHONE_RETR%26IndCtnUpgrade%3Dy%26RqtType%3DUP">
+				<span class="font12 fontWeightBoldForce">Upgrade now</span>
 				</a>
+			</div>
+			<div class="MarTop12 center padtopbot0 rel normal" style="display: none;" id="Device_Elig_8013680555">
+				<div class="upgradeSM" style="background-position: left 5px">
+					<span class="font10 colorGreen fontWeightBoldForce top-5pxIE top-3px noTextDecor" id="Device_EligNote_8013680555">
+						Eligible for upgrade 
+					</span>
+				</div>
 			</div>
 		</div>
 
@@ -2034,9 +2225,9 @@ jQuery(document).ready(function() {
 				<tbody>
 					
 						<tr>
-							<td class="meterwrapper">
+							<td class="meterwrapper PadBot5">
 								<div class="colorGrey font14">
-									<strong>Billing Cycle:&nbsp;</strong><span class="days-left">8</span>
+									<strong>Billing Cycle:&nbsp;</strong><span class="days-left">28</span>
 									days&nbsp;left
 								</div>
 								<div class="meter-container-5">
@@ -2049,7 +2240,7 @@ jQuery(document).ready(function() {
 					
 						<tr>
 							<td class="meterwrapper PadBot5">
-								<div class="float-left ForcePadLeft0">
+								<div class="float-left ForcePadLeft0 w240 botMar0">
                               		<div class="top2px rel"><span class="font14 plan fontWeightBoldForce">Talk</span>
 									
 									
@@ -2067,17 +2258,18 @@ jQuery(document).ready(function() {
 													
 														&ndash; including Rollover Minutes
 													
-														</div><span class="minutes-used displayNone">15</span><span class="total-minutes displayNone">4518</span>
+														</div><span class="minutes-used displayNone">2</span><span class="total-minutes displayNone">4524</span>
 														<span class="singleDashMeterStatus displayNone ">normal</span>
 														<div class="meter-container-10">
 															<div class="meter-value-10 normal"></div>
 														</div>
+														<div class="alertUsageIcon"></div>
 													</div>
-													<div class="float-left MarTop18 now-rap font12"><span class="alertUsageIcon"></span>
+													<div class="float-left MarTop18 now-rap font12">
 													
 													
 													
-														<span class="fontWeightBoldForce">4503</span>&nbsp;mins&nbsp;left</div>
+														<span class="fontWeightBoldForce">4522</span>&nbsp;mins&nbsp;left</div>
 													
 												
 												
@@ -2092,7 +2284,7 @@ jQuery(document).ready(function() {
 					
 						<tr>
 							<td class="meterwrapper PadBot5">
-								<div class="float-left ForcePadLeft0">
+								<div class="float-left ForcePadLeft0 w240 botMar0">
                               		<div class="top2px rel"><span class="font14 plan fontWeightBoldForce">Text
 									
 									
@@ -2103,7 +2295,13 @@ jQuery(document).ready(function() {
 											<!-- Start : Limited IMB Section -->
 											
 											
-												<span class="LeftSolidBorder padLeft10 colorGreen MarLeft10 fontWeightBoldForce">Unlimited</span></div>
+												</div><span class="minutes-used displayNone">1</span><span class="total-minutes displayNone">1</span>
+													<span class="singleDashMeterStatus displayNone">normal</span>
+													<div class="meter-container-10">
+														<div class="meter-value-10 normal"></div>
+													</div>
+												</div>
+												<div class="float-left MarTop18 now-rap font12">Unlimited</div>
 											
 											
 											<!-- End : Limited IMB Section -->
@@ -2115,8 +2313,8 @@ jQuery(document).ready(function() {
 					
 					
 						<tr>
-							<td class="meterwrapper PadBot5">
-								<div class="float-left ForcePadLeft0">
+							<td class="meterwrapper Padbot0">
+								<div class="float-left ForcePadLeft0 w240 botMar0">
                               		<div class="top2px rel"><span class="font14 plan fontWeightBoldForce">Web</span>
 									
 									
@@ -2128,16 +2326,17 @@ jQuery(document).ready(function() {
 											
 											
 													</div>
-													<span class="minutes-used displayNone">2.7</span><span class="total-minutes displayNone">2</span>
-													<span class="singleDashMeterStatus displayNone">alert</span>
+													<span class="minutes-used displayNone">0.1</span><span class="total-minutes displayNone">2</span>
+													<span class="singleDashMeterStatus displayNone">normal</span>
 													<div class="meter-container-10">
-														<div class="meter-value-10 alert"></div>
+														<div class="meter-value-10 normal"></div>
 													</div>
+													<div class="alertUsageIcon"></div>
 												</div>
-												<div class="float-left MarTop18 now-rap font12"><span class="alertUsageIcon"></span>
+												<div class="float-left MarTop18 now-rap font12">
 												
 												
-													<span class="fontWeightBoldForce">0</span>&nbsp;GB&nbsp;left
+													<span class="fontWeightBoldForce">1.9</span>&nbsp;GB&nbsp;left
 													</div>
 													</div>
 													
@@ -2150,32 +2349,6 @@ jQuery(document).ready(function() {
 							 </tr>
 							 <!-- Over/Top-up/CTA HERE -->
 							 
-							  	<tr>
-									<td class="meterwrapper PadLeft10 Padbot0">
-									
-										<!-- Start : Limited OveragePack Section -->
-										
-										<div class="overagePackFT">
-											<div class="float-left ForcePadLeft0 w188" style="margin-top:-5px;">
-												<div class="top2px rel"><span class="font11 plan">Data Overage Pack</span></div>							  
-												<span class="minutes-used displayNone">0.7</span><span class="total-minutes displayNone">1</span>
-												<div class="meter-container-5-sm">
-													<div class="meter-value-sec-5 warning"></div>	
-												</div>
-											</div>
-											<div class="float-left padLeft0 MarTop7 now-rap font12" style="margin-left:-11px;"><span class="minutes-used">0.7</span>&nbsp;of&nbsp;<span class="total-minutes">1</span> &nbsp;GB&nbsp;
-												</div>
-											<div class="ClearNew"></div>
-										</div>
-										<!-- End : Limited OveragePack Section -->
-									
-									<div class="botMar0 lineHeight12">
-										<span class="padRight10">&nbsp;<a class="wt_Body" href="/olam/redirectToInternalURL.myworld?newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555&redirectURL=%2Folam%2FgotoFeatures.olamexecute" title="Upgrade Web limit">Upgrade Web limit</a></span>
-										<span class="LeftSolidBorder padLeft10 "><a class="wt_Body" href="/olam/displayUsageDetails.myworld?isWebTabInFocus=true&newInFocusWirelessBAN=265030279423&newInFocusCtn=8013680555" title="View usage details">View usage details</a></span>
-									</div>
-								</td>
-							  </tr>
-							
 							
 					
 					
@@ -2193,7 +2366,7 @@ jQuery(document).ready(function() {
 				
 				
 			</div>
-			<div class="clear"></div>
+			<div class="ClearNew"></div>
 			<!-- /Usage Container -->
 		</div>
 		<div class="ClearNew"></div>
@@ -2204,201 +2377,14 @@ jQuery(document).ready(function() {
 				
 			
 			
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-<!-- Message Center Module -->
-
-
-	<script type="text/javascript">
-	  jQuery(document).ready(function() {
-		  /* Wireless Dashboard Ajax Starts */
-			/* Scroll Functionality Starts*/
-			
-			var current = jQuery('#messageDiv p:first-child');
-			var first = jQuery('#messageDiv p:first-child');
-			var last = jQuery('#messageDiv p:last-child');		
-			var msgCount = jQuery('#messageDiv').find('p').length;
-			
-			jQuery('#displayMessage').html(current.html());
-			if( msgCount == 1){
-				jQuery('#scrollUp').css('display', 'none');
-				jQuery('#scrollUpDisabled').css('display', 'block');
-				jQuery('#scrollDown').css('display', 'none');
-				jQuery('#scrollDownDisabled').css('display', 'block');			
-			}
-			else{
-				jQuery('#scrollUp').click(function(){		
-					if(current.html() != first.html() ){
-						jQuery('#scrollDown').css('display', 'block');
-						jQuery('#scrollDownDisabled').css('display', 'none');
-						current = current.prev('p');
-					}
-					if(current.html() == first.html() ){
-						//current = last;
-						jQuery(this).css('display', 'none');
-						jQuery('#scrollUpDisabled').css('display', 'block');				
-					}
-					var prevMessage = current.html();
-					jQuery('#displayMessage').html(prevMessage);			
-							
-				});
-
-				jQuery('#scrollDown').click(function(){
-					if(current.html() != last.html() ){
-						current = current.next('p');
-						jQuery('#scrollUp').css('display', 'block');
-						jQuery('#scrollUpDisabled').css('display', 'none');
-						//current = jQuery('#messageDiv p:first-child');
-					}
-					if(current.html() == last.html() ){
-						jQuery('#scrollDown').css('display', 'none');
-						jQuery('#scrollDownDisabled').css('display', 'block');
-						//current = first;
-					}
-					var nextMessage = current.html();
-					jQuery('#displayMessage').html(nextMessage);				
-				});
-			}
-			
-			/* Scroll Functionality Ends */
-			/* Wireless Dashboard Ajax Ends */	
-	  });
-	</script>
-		
-        
-        <div class="TopSolidBorderE5">
-		<div class="mod-message-center">	
-	    	<h5 class="font14 float-left rel top8">
-	    		AT&amp;T Messages
-	    		
-	    			<a href="/olam/showAllMessageCenter.myworld?" title="" class="vtop font14">(9)</a>
-	    		
-	    	</h5>
-	    	<div class="float-left messageCenterBG">
-	      		
-	      			
-	      				<p id="displayMessage" class="float-left">
-	      					  Hurricane Sandy text donations   
-	      					<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Sandy_Text_MSG" class="MarLeft5">Learn more</a>
-	      				</p>
-					
-	      		
-	      			
-	      		
-	      			
-	      		
-	      			
-	      		
-	      			
-	      		
-	      			
-	      		
-	      			
-	      		
-	      			
-	      		
-	      			
-	      		
-	      		<img alt="Message Scroller" id="scrollUp" class="float-left top1px cursorPointer" style="display:none;" src="/olam/images/brand30/bg_msg_center_upArrow.png"  />
-				<img id="scrollUpDisabled" class="float-left top1px"  src="/olam/images/brand30/bg_msg_center_upArrow_Disabled.png">
-	      		<img id="scrollDown"  alt="Message Scroller" class="float-left top1px cursorPointer" src="/olam/images/brand30/bg_msg_center_downArrow.png" />
-				<img id="scrollDownDisabled" class="float-left top1px" style="display:none;"  src="/olam/images/brand30/bg_msg_center_downArrow_Disabled.png">
-	      		<div class="clear"></div>
-	  		</div>
-	  		<div id="messageDiv" class="displayNone">
-	    		
-		    		<p class="float-left">
-		    			  Hurricane Sandy text donations   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Sandy_Text_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  Fall in love with your phone again.
-   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Device_How_To_90Plus_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  A recent Trojan Horse email scam targeting AT&amp;T customers inclu... 
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Email_Billing_Scam_1208_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  Check out the new format for your online bill.
-   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Your_Bill_Video_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  At-a-glance your billed usage at your fingertips.
-   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Billed_Usage_Video_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  Easily add or change Wireless services with ease.
-   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Add_Change_Video_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  Need options when paying your bill&#63; AT&amp;T has them.   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Flex_Pay_Video_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  Simplify your life by designating Retail Authorized Users on yo... 
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Retail_Auth_User_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    	
-		    		<p class="float-left">
-		    			  Password protect your phone
-   
-		    			<a href="/olam/viewUserMessageDetail.myworld?messageId=W_Protect_Phone_MSG" class="MarLeft5">Learn more</a>
-		    		</p>
-		    		
-	  		</div>
-	  		<div class="viewAll float-left rel top10px">
-	  			<a title="" class="wt_Body" href="/olam/showAllMessageCenter.myworld?">
-	  				Read all messages
-	  			</a>
-	  		</div>
-	  		<div class="clear"></div>
-		</div>
-		</div>
-
-
-<!-- 
- Message center modules [[Dashboard]]
- Message center Targeter Name [UserMessaging]
- Message count returned by targeter [9]
-Deleted Messages Count[0], Old Messages Count [0]
-
- -->
-
-<!-- /Message Center Module -->
-
+			<script>
+	doSectionUpdateOnPageLoad( "", ModuleName.ATGMessageCenter, true, "" );
+</script>
+<div class="TopSolidBorderE5">
+	<div class="mod-message-center" id="dashboardMessageCenterDiv">
+	
+	</div>
+</div>		
 		</div>
 	</div>
 </div>
@@ -2406,1037 +2392,22 @@ Deleted Messages Count[0], Old Messages Count [0]
 
 					
 					
-					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-<div class="ClearNew"></div>
+					<div class="ClearNew"></div>
 <!-- Personalized Promotions Module -->
 <div id="promocontent" class="sprintContent botMar0 PadBot0 ">
-	<div class="box shadowLeft">
-		<div class="shadowRight">
-			<div id="promoContainer">	
-				<ul>
-						
-					
-					
-							
-								<li class=" w311 WDashvertSep MarLeft13 MarRight14">
-							
-							
-								
-									
-						
-
-
-
-
-
-
-<!-- Page Slot Flag = true -->
-
-
-
-
-
-
- 
-
-	
-
- 
-
-
-	
-	
-
-
-
-	
-
-	
-	<!-- Style dashboardWireless , slot Wireless/Dashboard/DashboardPromotion1 -->
-	
-		
-			
- 				
-		
-
-
-
-
-
-				 
-
-
-
-
-
-
-
-  
-       
-   
-  
-  
-       
-   
-  
-  
-
-
-
-	
-
-
-
-<!-- Dashboard Promo - Wireless/Dashboard/DashboardPromotion1 -->
-		
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-
-		
-			
-			
-			
-			
-			
-			
-			
-			
-				
-					
-				
-
-				
-					
-				
-				<!-- dSource - Penny_Refurbs_AAL_New_DB -->
-				
-					
-
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-
-					
-
-				
-
-
-				
-					
-
-					
-
-					
-
-					
-
-				
-					
-
-					
-							
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-						
-							
-
-							
-								
-							 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		 
-		
-			
-		
-		 	
-
-
-
-
-	
-					
-					
-				
-
-
-						
-       				
-						      			
-
-       			
-       			
-       			
-
-												       			
-						
-						
-
-						
-
-      		
-						
-       				
-						      			
-
-       			
-       			
-       			
-
-												       			
-						
-						
-
-						
-            	
-              		
-            	
-      			
-
-      		
-					
-											
-													
-					
-					
-					
-											
-													
-					
-
-											
-													
-					
-					
-					
-					
-										
-					
-					
-										
-						      	
-						      	
-						
-							
-                        
-					
-				
-
-
-			
-
-	
-	
-
-
-
-
-
-										
-            		
-            			<!-- added blank for param aTagClassName  -->
-            			    		<!-- added blank for param aTagClassName  -->
-            					
-						
-						        			
-
-						<a target="" class="" onclick="dcsMultiTrack('DCS.dcsuri','/virtual/olam/promo','WT.mc_id','EC01K10038L00000O','DCSext.source','EC01K10038L00000O')" href="/olam/alRatePlanAction.olamexecute?event=goToAddLineTermsPage&reportActionEvent=A_ADL_ADD_A_LINE_RETR&dreferrer=Dashboard&dsource=Penny_Refurbs_AAL_New_DB">
-													
-								
-													
-							
-							<img src="/OLAM_PROD_CMS/English/images/wirelesstile_myATT_Refurb_290x163.jpg"  width = '290'  class="" />
-						</a>
-						
-            					
-            						
-					 
-					
-
-
-							 
-							
-						
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-						
-					
-
-				
-
-
-				
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-
-				
-
-			
-
-			
-			
-
-		
-
-
-	
-	
-
-				
-
-
-	
-
-
-
-						
-						</li>
-					
-					
-							
-							
-								<li class="w311 WDashvertSep MarLeft5 MarRight20">
-							
-								
-									
-						
-
-
-
-
-
-
-<!-- Page Slot Flag = true -->
-
-
-
-
-
-
- 
-
-	
-
- 
-
-
-	
-	
-
-
-
-	
-
-	
-	<!-- Style dashboardWireless , slot Wireless/Dashboard/DashboardPromotion2 -->
-	
-		
-			
- 				
-		
-
-
-
-
-
-				 
-
-
-
-
-
-
-
-  
-       
-   
-  
-  
-       
-   
-  
-  
-
-
-
-	
-
-
-
-<!-- Dashboard Promo - Wireless/Dashboard/DashboardPromotion2 -->
-		
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-
-		
-			
-			
-			
-			
-			
-			
-			
-			
-				
-					
-				
-
-				
-					
-				
-				<!-- dSource - Int_Data_Packages_New_DB -->
-				
-					
-
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-
-					
-
-				
-
-
-				
-					
-
-					
-
-					
-
-					
-
-				
-					
-
-					
-							
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-						
-							
-
-							
-								
-							 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		 
-		
-			
-		
-		 	
-
-
-
-
-	
-					
-					
-				
-
-
-						
-       				
-						      			
-
-       			
-       			
-       			
-
-												       			
-						
-						
-
-						
-
-      		
-						
-       				
-						      			
-
-       			
-       			
-       			
-
-													
-							
-       									       			
-						
-						
-
-						
-
-      		
-					
-											
-													
-					
-					
-					
-											
-													
-					
-
-											
-													
-					
-					
-					
-					
-										
-					
-					
-										
-						      	
-						      	
-						
-							
-                        
-					
-				
-
-
-			
-
-	
-	
-
-
-
-
-
-										
-            		
-            			<!-- added blank for param aTagClassName  -->
-            			    		<!-- added blank for param aTagClassName  -->
-            					
-						
-						        			
-
-						<a target="" class="" onclick="dcsMultiTrack('DCS.dcsuri','/virtual/olam/promo','DCS.dcsref',window.location.href,'WT.mc_id','ICDBOL00000IND00L','DCSext.source','ICDBOL00000IND00L')" href="/olam/gotoShop.olamexecute?event=displayPromotion&source=ICDBOL00000IND00L&wtExtndSource=ICDBOL00000IND00L&promotionId=Int_Data_Packages_New_DB&reportActionEvent=A_SHOP_SHOP_PROMOTION_RETR&dreferrer=Dashboard&dsource=Int_Data_Packages_New_DB">
-													
-								
-													
-							
-							<img src="/OLAM_PROD_CMS/English/images/081712_GlobalMsg_290x163.jpg"  width = '290'  class="" />
-						</a>
-						
-            					
-            						
-					 
-					
-
-
-							 
-							
-						
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-						
-					
-
-				
-
-
-				
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-
-				
-
-			
-
-			
-			
-
-		
-
-
-	
-	
-
-				
-
-
-	
-
-
-
-						
-						</li>
-					
-					
-							
-							
-							
-								<li class="w304 MarRight13">
-								
-									
-						
-
-
-
-
-
-
-<!-- Page Slot Flag = true -->
-
-
-
-
-
-
- 
-
-	
-
- 
-
-
-	
-	
-
-
-
-	
-
-	
-	<!-- Style dashboardWireless , slot Wireless/Dashboard/DashboardPromotion3 -->
-	
-		
-			
- 				
-		
-
-
-
-
-
-				 
-
-
-
-
-
-
-
-  
-       
-   
-  
-  
-       
-   
-  
-  
-
-
-
-	
-
-
-
-<!-- Dashboard Promo - Wireless/Dashboard/DashboardPromotion3 -->
-		
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-
-		
-			
-			
-			
-			
-			
-			
-			
-			
-				
-					
-				
-
-				
-					
-				
-				<!-- dSource - W_Service_Tile_DB -->
-				
-					
-
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-
-					
-
-				
-
-
-				
-					
-
-					
-
-					
-
-					
-
-				
-					
-
-					
-							
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-						
-							
-
-							
-								
-							 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		 
-		
-			
-		
-		 	
-
-
-
-
-	
-					
-					
-				
-
-
-						
-       				
-						      			
-
-       			
-       			
-       			
-
-												       			
-						
-						
-
-						
-
-      		
-						
-       				
-						      			
-
-       			
-       			
-       			
-
-												       			
-						
-						
-							        			
-								
-								
-							
-      			
-
-						
-
-      		
-					
-											
-													
-					
-					
-					
-											
-													
-					
-
-											
-													
-					
-					
-					
-					
-										
-					
-					
-										
-						      	
-						      	
-						
-							
-                        
-					
-				
-
-
-			
-
-	
-	
-
-
-
-
-
-						
-					
-					<a  href="http://www.att.com/shop/apps/myatt-mobile.html?source=IAMWMW65600000ipL" target="_blank" target="_blank" onclick=""><img src="/OLAM_PROD_CMS/English/images/clo-MyATT-290x163.jpg"  width = '290'  class="" /></a>
-					
-					 
-					
-
-
-							 
-							
-						
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-						
-					
-
-				
-
-
-				
-					
-
-					
-
-					
-
-				
-					
-
-					
-
-					
-
-					
-
-				
-
-			
-
-			
-			
-
-		
-
-
-	
-	
-
-				
-
-
-	
-
-
-
-						
-						</li>
-					
-				</ul>
-			</div>
+	<div class="box shadowLeft botMar5">
+			<div class="shadowRight">
+					<div id="promoContainer">
+					
+					</div>
 			<div class="ClearNew"></div>
 		</div>
 	</div>
 </div>
 <!-- /Personalized Promotions Module -->     
-
+<script>
+	doSectionUpdateOnPageLoad( "", ModuleName.ATGPromo, true, "" );
+</script
 				</div>
 				
 				<!-- Secondary Content -->
@@ -3474,62 +2445,63 @@ Deleted Messages Count[0], Old Messages Count [0]
 
 
 
-
-
-
-
-
-
+<!-- Added check to hide or not display the pre-footer section on the pages if user is coming through WG env -->
 
 
 	
-	<!-- Begin LP Custom Variables-->
 	
-	<script type="Text/javascript">
 	
-		lpAddVars('session','sessionId','2CyzQdpG3LnbJTyJ8PDhn9lVWnQTgnpvPxTvN0nTvx8snty0thwP');
-		lpAddVars('session','stack','p9eam1m66');
-		lpAddVars('session','CTN','8013680555');
-			
-			lpAddVars('session','AccountOwnerName','DEREK NIELSON');
-			lpAddVars('session','FAN','');
+	
+	
+	
+	
+	
+	
 		
-		lpAddVars('session','upgradeEligibilityFlag','');
-		lpAddVars('page','Section','MyATT');//Pass the section of the site the visitor is currently on
-		lpAddVars('page','Category','');//Pass the secondary navigation category of the site the visitor is currently on
-		lpAddVars('page','PageName','Dashboard');//Pass the page name for the page visitor is currently on
-		lpAddVars('page','PhoneDevice','Apple iPhone 4S');//Pass the phone device name for current account visitor is currently on
-		lpAddVars('page','FeatureConversionStage','');//Pass the pagenames that make up the Feature Conversion Process
-		lpAddVars('page','Feature_OrderTotal','');//Pass the Monthly RMR of the total for features added to the account visitor is currently on
-	
-			
+		<!-- Begin LP Custom Variables-->
 		
-		lpSendData();
+		<script type="Text/javascript">
 		
-	</script>
-	<noscript><p>Script section containing code for Liveperson Chat Solution</p></noscript>
-	<!--Immediate Data Submission function-->
-	<!--<input type=button value="Immediate Data Submission" onClick="javascript:lpSendData('<Scope:page/session/visitor>','<Variable Name>','<Variable Value>');">-->
-	<!-- End LP Custom Variables-->
-
-
-<!-- CE PRE FOOTER -->
-	
+			lpAddVars('session','sessionId','1JWhQrJTH2Kj37pcxljpGbhpbyLJcfly5Nf8WzrYDhvk3LxD7Jvq');
+			lpAddVars('session','stack','p9eam1m30');
+			lpAddVars('session','CTN','8013680555');
+				
+				lpAddVars('session','AccountOwnerName','DEREK NIELSON');
+				lpAddVars('session','FAN','');
 			
-			<p>			
+			lpAddVars('session','upgradeEligibilityFlag','');
+			lpAddVars('page','Section','MyATT');//Pass the section of the site the visitor is currently on
+			lpAddVars('page','Category','');//Pass the secondary navigation category of the site the visitor is currently on
+			lpAddVars('page','PageName','Dashboard');//Pass the page name for the page visitor is currently on
+			lpAddVars('page','PhoneDevice','Apple iPhone 4S');//Pass the phone device name for current account visitor is currently on
+			lpAddVars('page','FeatureConversionStage','');//Pass the pagenames that make up the Feature Conversion Process
+			lpAddVars('page','Feature_OrderTotal','');//Pass the Monthly RMR of the total for features added to the account visitor is currently on
+		
 				
-					<a class="" title="Contract (Wireless)" href="http://www.att.com/wirelessterms" target="_blank">Contract (Wireless)</a>
-						|
+		</script>
+		<noscript><p>Script section containing code for Liveperson Chat Solution</p></noscript>
+		<!--Immediate Data Submission function-->
+		<!--<input type=button value="Immediate Data Submission" onClick="javascript:lpSendData('<Scope:page/session/visitor>','<Variable Name>','<Variable Value>');">-->
+		<!-- End LP Custom Variables-->
+	
+	
+	<!-- CE PRE FOOTER -->
+		
 				
-					<a class="" title="Cell Phone Records Security" href="http://www.wireless.att.com/learn/articles-resources/records-security.jsp" target="_blank">Cell Phone Records Security</a>
-						|
-				
-					<a class="" title="Wireless Legal Site" href="http://www.wireless.att.com/learn/articles-resources/wireless-legal.jsp" target="_blank" target="_blank">Wireless Legal Site</a>
-						
+				<p>			
+					
+						<a class="" title="Contract (Wireless)" href="http://www.att.com/wirelessterms" target="_blank">Contract (Wireless)</a>
+							|
+					
+						<a class="" title="Cell Phone Records Security" href="http://www.wireless.att.com/learn/articles-resources/records-security.jsp" target="_blank">Cell Phone Records Security</a>
+							|
+					
+						<a class="" title="Wireless Legal Site" href="http://www.wireless.att.com/learn/articles-resources/wireless-legal.jsp" target="_blank" target="_blank">Wireless Legal Site</a>
 							
-			</p>
-		
-
+								
+				</p>
+			
+	
 <!-- /CE PRE FOOTER -->
 				</div>
 			<!--  /PRE FOOTER-->
@@ -3560,15 +2532,19 @@ Deleted Messages Count[0], Old Messages Count [0]
 
 
 
-
-
  
 
 
 
 
-<!-- Moved include from CEPreFooter.jsp to CEFooter.jsp for WUP00491571  -->
 
+
+<!-- Added check to hide or not display the footer section on the page if user is coming through WG env -->
+
+	
+		
+		<!-- Moved include from CEPreFooter.jsp to CEFooter.jsp for WUP00491571  -->
+		
 
 
 
@@ -3613,103 +2589,103 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 
 
 
-
-
-
-
-
-
-
-<!-- Page Event ID|Screen Name = [P_DBD_DASHBOARD|Dashboard Pg] -->
-
-
-
-
-
-
-	<!--CE FOOTER -->
 		
-		<div class="group">
-			<div class="w346 left dotSites padBot30"> 
-				<span class="dotCom">
-				<a href="http://www.att.com/">
-			 		<img src="//www.att.com/media/att/2011/global/nav/en_US/logoATTdotcom.png" width="133px" height="24px" alt="Shop, Service, Support." />
-			 	</a>
-			 	</span>
+		
+		
+		
+		
+		
+		
+		<!-- Page Event ID|Screen Name = [P_DBD_DASHBOARD|Dashboard Pg] -->
+		
+		
+		
+		
+		
+		
+			<!--CE FOOTER -->
 				
-				<span class="dotNet">
-				<a href="http://www.att.net/">
-			  	<img src="//www.att.com/media/att/2011/global/nav/en_US/logoATTdotnet.png" width="173px" height="21px" alt="E-mail - News - Weather &amp; More" /></a>
-			  	</span>
-			</div>	
-			<div class="clear"></div>
-			<div class="left">
-				<p class="separator botMar0">
-					
-						<a class="begin" title="Privacy Policy" href="http://www.att.com/privacy/" >Privacy Policy</a> 
-					
-						<a  title="Careers" href="http://www.att.jobs/" >Careers</a> 
-					
-						<a  title="Contact Us" href="/olam/contactUsAction.olamexecute?reportActionEvent=A_CONTACT_US_DISP_SUB" >Contact Us</a> 
-					
-						<a  title="Terms of Use" href="http://www.att.com/gen/general?pid=11561" >Terms of Use</a> 
-					
-						<a  title="Site Map" href="http://www.att.com/sitemap/" >Site Map</a> 
-					
-						<a  title="Accessibility " href="http://www.att.com/gen/general?pid=10190" >Accessibility </a> 
-					
-						<a  title="Wireless Emergency Alerts" href="http://www.att.com/gen/public-affairs?pid=20107" >Wireless Emergency Alerts</a> 
-					
-						<a  title="Advertising Choices" href="http://www.att.com/internal/adchoices" >Advertising Choices</a> 
-					
-						<a  title="Broadband Information" href="http://www.att.com/internal/broadbandinfo" class="end">Broadband Information</a> 
-					
-					<br class="clear"/>	
-				</p>
-				<p class="copyright"><a href="http://www.att.com/gen/privacy-policy?pid=2587">&copy;2012 AT&amp;T Intellectual Property</a>. All rights reserved. AT&amp;T, the AT&amp;T logo and all other AT&amp;T marks contained herein are trademarks of AT&amp;T Intellectual Property and/or AT&amp;T affiliated companies. AT&amp;T 36USC220506</p>
-			</div>
-		</div>
-		<div class="logos">
+				<div class="group">
+					<div class="w346 left dotSites padBot30"> 
+						<span class="dotCom">
+						<a href="http://www.att.com/">
+					 		<img src="//www.att.com/media/att/2011/global/nav/en_US/logoATTdotcom.png" width="133px" height="24px" alt="Shop, Service, Support." />
+					 	</a>
+					 	</span>
+						
+						<span class="dotNet">
+						<a href="http://www.att.net/">
+					  	<img src="//www.att.com/media/att/2011/global/nav/en_US/logoATTdotnet.png" width="173px" height="21px" alt="E-mail - News - Weather &amp; More" /></a>
+					  	</span>
+					</div>	
+					<div class="clear"></div>
+					<div class="left">
+						<p class="separator botMar0">
+							
+								<a class="begin" title="Privacy Policy" href="http://www.att.com/privacy/" >Privacy Policy</a> 
+							
+								<a  title="Careers" href="http://www.att.jobs/" >Careers</a> 
+							
+								<a  title="Contact Us" href="/olam/contactUsAction.olamexecute?reportActionEvent=A_CONTACT_US_DISP_SUB" >Contact Us</a> 
+							
+								<a  title="Terms of Use" href="http://www.att.com/gen/general?pid=11561" >Terms of Use</a> 
+							
+								<a  title="Site Map" href="http://www.att.com/sitemap/" >Site Map</a> 
+							
+								<a  title="Accessibility " href="http://www.att.com/gen/general?pid=10190" >Accessibility </a> 
+							
+								<a  title="Wireless Emergency Alerts" href="http://www.att.com/gen/public-affairs?pid=20107" >Wireless Emergency Alerts</a> 
+							
+								<a  title="Advertising Choices" href="http://www.att.com/internal/adchoices" >Advertising Choices</a> 
+							
+								<a  title="Broadband Information" href="http://www.att.com/internal/broadbandinfo" class="end">Broadband Information</a> 
+							
+							<br class="clear"/>	
+						</p>
+						<p class="copyright"><a href="http://www.att.com/gen/privacy-policy?pid=2587">&copy;2012 AT&amp;T Intellectual Property</a>. All rights reserved. AT&amp;T, the AT&amp;T logo and all other AT&amp;T marks contained herein are trademarks of AT&amp;T Intellectual Property and/or AT&amp;T affiliated companies. AT&amp;T 36USC220506</p>
+					</div>
+				</div>
+				<div class="logos">
+				
+					<a class="firstLogo" href="http://www.ctia.org/" target="_blank" target="_blank">
+						<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoCTIA.png" alt="The first nationwide carrier to be awarded the Seal of Wireless Quality. For details, visit www.ctia.org." title="The first nationwide carrier to be awarded the Seal of Wireless Quality. For details, visit www.ctia.org." width="78px" height="100px"/>
+					</a>	
+				
+					<a  href="https://www.bbb.org/online/consumer/cks.aspx?id=110020911221" target="_blank" target="_blank">
+						<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoBBB.png" alt="Click to verify BBB accreditation and to see a BBB report." title="Click to verify BBB accreditation and to see a BBB report." />
+					</a>	
+				
+					<a  href="http://clicktoverify.truste.com/pvr.php?page=validate&companyName=AT%26T&sealid=101" target="_blank" target="_blank">
+						<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoTRUSTe.png" alt="This site is certified by TRUSTe" title="This site is certified by TRUSTe" />
+					</a>	
+				
+					<a  href="http://www.yellowpages.com/" target="_blank" target="_blank">
+						<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoYP.png" alt="YELLOWPAGES.COM" title="YELLOWPAGES.COM" />
+					</a>	
+				
+					<a  href="http://www.realpageslive.com/" target="_blank" target="_blank">
+						<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoDigitalWhiteYellowPages.png" alt="Digital White and Yellow Pages" title="Digital White and Yellow Pages" />
+					</a>	
+				
+					<a  href="http://www.att.net/teamusa" target="_blank" target="_blank">
+						<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoOlympics.png" alt="USA Proud Sponsor of the U.S. Olympic Team" title="USA Proud Sponsor of the U.S. Olympic Team" />
+					</a>	
+				
+			
+				
+				 	
+				 </div>
+			<!-- WebTrends Base Tag : include only at end of page -->
+			
+				<meta name="DCSext.wtZipCode" content="84057">
+			
+			
+			
+				
+				
+			
+			
 		
-			<a class="firstLogo" href="http://www.ctia.org/" target="_blank" target="_blank">
-				<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoCTIA.png" alt="The first nationwide carrier to be awarded the Seal of Wireless Quality. For details, visit www.ctia.org." title="The first nationwide carrier to be awarded the Seal of Wireless Quality. For details, visit www.ctia.org." width="78px" height="100px"/>
-			</a>	
-		
-			<a  href="https://www.bbb.org/online/consumer/cks.aspx?id=110020911221" target="_blank" target="_blank">
-				<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoBBB.png" alt="Click to verify BBB accreditation and to see a BBB report." title="Click to verify BBB accreditation and to see a BBB report." />
-			</a>	
-		
-			<a  href="http://clicktoverify.truste.com/pvr.php?page=validate&companyName=AT%26T&sealid=101" target="_blank" target="_blank">
-				<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoTRUSTe.png" alt="This site is certified by TRUSTe" title="This site is certified by TRUSTe" />
-			</a>	
-		
-			<a  href="http://www.yellowpages.com/" target="_blank" target="_blank">
-				<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoYP.png" alt="YELLOWPAGES.COM" title="YELLOWPAGES.COM" />
-			</a>	
-		
-			<a  href="http://www.realpageslive.com/" target="_blank" target="_blank">
-				<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoDigitalWhiteYellowPages.png" alt="Digital White and Yellow Pages" title="Digital White and Yellow Pages" />
-			</a>	
-		
-			<a  href="http://www.att.net/teamusa" target="_blank" target="_blank">
-				<img  src="//www.att.com/media/att/2011/global/nav/en_US/logoOlympics.png" alt="USA Proud Sponsor of the U.S. Olympic Team" title="USA Proud Sponsor of the U.S. Olympic Team" />
-			</a>	
-		
-	
-		
-		 	
-		 </div>
-	<!-- WebTrends Base Tag : include only at end of page -->
-	
-		<meta name="DCSext.wtZipCode" content="84057">
-	
-	
-	
-		
-		
-	
-	
-
 
 
 
@@ -3742,7 +2718,7 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 
 
 <script language="JavaScript" type="text/javascript">
-	var VirtuOzVars = {"ui":{"wii":"0","ui":"0","zip":"84057","ln":"NIELSON","wi":"0","at":"wireless","as":"1","ct":"CONS","au":"active","uw":"1","bl":"E","st":"UT","em":"DEREKNIELSON@GMAIL.COM","fn":"DEREK"},"wi":{"pd":"0","cb":"0","mo":"Apple IPHONE 4S","ue":"0","ba":"265030279423","pb":"1","im":"013181000181274","ce":"10/15/2013","ct":"8013680555","ae":"0","mla":"0"},"bi":{"it":"User","cp":"Dashboard","ap":"p9eam1m66","sc":"OLAM","pn":"Dashboard","se":"Dashboard","si":"2CyzQdpG3LnbJTyJ8PDhn9lVWnQTgnpvPxTvN0nTvx8snty0thwP!459674145!1352526212685"}};
+	var VirtuOzVars = {"ui":{"wii":"0","ui":"0","zip":"84057","ln":"NIELSON","wi":"0","at":"wireless","as":"1","ct":"CONS","au":"active","uw":"1","bl":"E","st":"UT","em":"DEREKNIELSON@GMAIL.COM","fn":"DEREK"},"wi":{"pd":"0","cb":"0","mo":"Apple IPHONE 4S","ue":"0","ba":"265030279423","pb":"1","im":"013181000181274","ce":"10/15/2013","ct":"8013680555","ae":"0","mla":"0"},"bi":{"it":"User","cp":"Dashboard","ap":"p9eam1m30","sc":"OLAM","pn":"Dashboard","se":"Dashboard","si":"1JWhQrJTH2Kj37pcxljpGbhpbyLJcfly5Nf8WzrYDhvk3LxD7Jvq!36125250!1353386451745"}};
 </script>
 <!--  VirtuOzLoader.js file included for RD2113 - Virtual Expert - 1104-->
 <script type="text/javascript" src="/olam/virtuOz/scripts/VirtuOzLoader.js"></script>
@@ -3805,10 +2781,10 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 		document.cookie = curCookie; 
 	}
 	</script>
-
-
-<!-- Send NRT and CSR Report Events by AJAX -->
-
+		
+		
+		<!-- Send NRT and CSR Report Events by AJAX -->
+		
 
 
 
@@ -3840,10 +2816,10 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 		new Ajax.Request('/olam/unauth/sendReportEventInAjax.myworld', { method:'post' });
 	</script>
 
-
-
-
-	
+		
+		
+		
+			
 
 <!--  ATLAS TAG FOR DASHBOARD -->
 
@@ -3855,15 +2831,15 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 <noscript><iframe src="https://view.atdmt.com/jaction/cntcin_OLAMLoginPageUATDeviceDetailsSKU_10/v3/ato./[atc1.Apple IPHONE 4S]" width="1" height="1" frameborder="0" scrolling="No" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0"></iframe></noscript>
 
 
-
-
-
-	
+		
+		
+			
 
 
 
 	<script type="text/javascript">
 	var PASSTHROUGH_URL = "passthroughAction.myworld";
+	var WEBTREND_APPID = "myATT";
 	var array = [ "wt_Header", "wt_MainNav", "wt_SubNav", "wt_LeftNav","wt_RightNav", "wt_Body", "wt_BodyAlerts", "wt_BodyQuickLinks", "wt_BodyModal", "wt_Footer" ];
 	var specificWebtrendClasses = "a.wt_Header, a.wt_MainNav, a.wt_SubNav, a.wt_LeftNav, a.wt_RightNav, a.wt_Body, a.wt_BodyAlerts, a.wt_BodyQuickLinks, a.wt_BodyModal, a.wt_Footer";
 	var globalWebtrendClasses = "div.wt_Header, div.wt_MainNav, div.wt_SubNav, div.wt_LeftNav, div.wt_RightNav, div.wt_Body, div.wt_BodyAlerts, div.wt_BodyQuickLinks, div.wt_BodyModal, div.wt_Footer";
@@ -3935,36 +2911,60 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 	
 	function getWebtrendLinkName(elementEvent)
 	{
-		if(jQuery(elementEvent).attr("linkName") !=null)
-		{
-			return jQuery(elementEvent).attr("linkName");			
+		var linkName = null;
+		if(jQuery(elementEvent).attr("linkName") !=null) {
+			linkName = jQuery(elementEvent).attr("linkName");			
 		}
 		else if(jQuery(elementEvent) !=null
 				&& jQuery(elementEvent).has('img').length 
-				&& jQuery(elementEvent).children('img') !=null)
-		{
-			return jQuery.trim(jQuery(elementEvent).children('img').attr('alt'));
+				&& jQuery(elementEvent).children('img') !=null) {
+			linkName = jQuery.trim(jQuery(elementEvent).find('img:first').attr('alt'));
 		}
-		else
-		{
-			return jQuery.trim(jQuery(elementEvent).text());	
+		else {
+			linkName = jQuery.trim(jQuery(elementEvent).text());	
 		}
+		return getValidWebtrendLinkName(linkName);
 	}
 	
+	function getValidWebtrendLinkName(linkName)
+	{
+		try{
+			if(linkName !=null){
+				linkName = linkName.split('-').join('');
+				if(!isNaN(linkName) && linkName.length >= 10){
+					return null;
+				}
+			}
+		}
+		catch(e){
+			// Do Nothing
+		}
+		return linkName;
+	}
 	function getLinkLocationFromClassName(className)
 	{
-		if(className.indexOf('wt_Header')!=-1) return "Header";
-		if(className.indexOf('wt_MainNav')!=-1) return "MainNav";
-		if(className.indexOf('wt_SubNav')!=-1) return "SubNav";
-		if(className.indexOf('wt_LeftNav')!=-1) return "LeftNav";
-		if(className.indexOf('wt_RightNav')!=-1) return "RightNav";
-		if(className.indexOf('wt_BodyAlerts')!=-1) return "Body_Alerts";
-		if(className.indexOf('wt_BodyQuickLinks')!=-1) return "Body_QuickLinks";
-		if(className.indexOf('wt_BodyModal')!=-1) return "Body_Modal";
-		if(className.indexOf('wt_Body')!=-1) return "Body";
-		if(className.indexOf('wt_Footer')!=-1) return "Footer";
+		var classLinkLoc = null;	
+		if(className.indexOf('wt_Header')!=-1) classLinkLoc = "Header";
+		else if(className.indexOf('wt_MainNav')!=-1) classLinkLoc = "MainNav";
+		else if(className.indexOf('wt_SubNav')!=-1) classLinkLoc = "SubNav";
+		else if(className.indexOf('wt_LeftNav')!=-1) classLinkLoc = "LeftNav";
+		else if(className.indexOf('wt_RightNav')!=-1) classLinkLoc = "RightNav";
+		else if(className.indexOf('wt_BodyAlerts')!=-1) classLinkLoc = "Body_Alerts";
+		else if(className.indexOf('wt_BodyQuickLinks')!=-1) classLinkLoc = "Body_QuickLinks";
+		else if(className.indexOf('wt_BodyModal')!=-1) classLinkLoc = "Body_Modal";
+		else if(className.indexOf('wt_Body')!=-1) classLinkLoc = "Body";
+		else if(className.indexOf('wt_Footer')!=-1) classLinkLoc = "Footer";
 		
-		return null;
+		if(classLinkLoc!=null)
+		{
+			if(jQuery('#DCSextwtPN')!=null
+					&& jQuery('#DCSextwtPN').val()!=null)
+			{
+				var pageName = ((jQuery('#DCSextwtPN').val()).split(' ').join(''));
+				return (WEBTREND_APPID + "_" + pageName + "_" + classLinkLoc);
+			}
+		}
+		return classLinkLoc;
 	}
 	
 	function addQuotes(string) 
@@ -4000,18 +3000,10 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 		try
 		{
 			var array = new Array();
-			var refURL = window.location.href;
-			// Referrer URL
-			array.push("DCS.dcsref");
-			array.push(addQuotes(refURL));
-			
 			// Link URI for the desitination
-			var dcsuri = getWebtrendLinkURI(elementEvent);
-			if(jQuery.trim(dcsuri) != null && jQuery.trim(dcsuri) != '')
-			{
-				array.push("DCS.dcsuri");
-				array.push(addQuotes(dcsuri));
-			}
+			var dcsuri = window.location.href;
+			/* array.push("DCS.dcsuri");
+			array.push(addQuotes(dcsuri)); -- As per David Request , We are removing "DCS.dcsuri" from the webtrend reporting. */ 
 
 			// wtUrlExt To pass Query Parameter if, Passthrough URL
 			if(dcsuri !=null
@@ -4057,22 +3049,26 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 				array.push(addQuotes(jQuery(this).attr("value")));
 			});
 		
-			dcsMultiTrack.apply(this, array);
+			// This is due to Iphone defect - where we need not send Phone number
+			if(jQuery.trim(linkName) != null && jQuery.trim(linkName) != '')
+			{
+				dcsMultiTrack.apply(this, array);
+			}
 		}
 		catch(exception){}
 	}
 	
 	</script>
 
-<input type='hidden' name='DCS.dcssip'	webtrendTagAttr='true'	value='www.att.com'/>
-<input type='hidden' name='DCSext.wtNoHit'	webtrendTagAttr='true'	value='1'/>
-<input type='hidden' name='DCSext.wtPN'	webtrendTagAttr='true'	value='Dashboard Pg'/>
-<input type='hidden' name='DCSext.wtCombBill'	webtrendTagAttr='true'	value='N'/>
-<input type='hidden' name='DCSext.wtLoginType'	webtrendTagAttr='true'	value='CTN'/>
-<input type='hidden' name='DCSext.wtCTN'	webtrendTagAttr='true'	value='8013680555'/>
-<input type='hidden' name='DCSext.wtAcctNum'	webtrendTagAttr='true'	value='265030279423'/>
-<input type='hidden' name='DCSext.wtAcctStatus'	webtrendTagAttr='true'	value='A'/>
-<input type='hidden' name='DCSext.wtLiabilityType'	webtrendTagAttr='true'	value='CONS'/>
+<input type='hidden' name='DCS.dcssip'	id='DCSdcssip'	webtrendTagAttr='true'	value='www.att.com'/>
+<input type='hidden' name='DCSext.wtNoHit'	id='DCSextwtNoHit'	webtrendTagAttr='true'	value='1'/>
+<input type='hidden' name='DCSext.wtPN'	id='DCSextwtPN'	webtrendTagAttr='true'	value='Dashboard Pg'/>
+<input type='hidden' name='DCSext.wtCombBill'	id='DCSextwtCombBill'	webtrendTagAttr='true'	value='N'/>
+<input type='hidden' name='DCSext.wtLoginType'	id='DCSextwtLoginType'	webtrendTagAttr='true'	value='CTN'/>
+<input type='hidden' name='DCSext.wtCTN'	id='DCSextwtCTN'	webtrendTagAttr='true'	value='8013680555'/>
+<input type='hidden' name='DCSext.wtAcctNum'	id='DCSextwtAcctNum'	webtrendTagAttr='true'	value='265030279423'/>
+<input type='hidden' name='DCSext.wtAcctStatus'	id='DCSextwtAcctStatus'	webtrendTagAttr='true'	value='A'/>
+<input type='hidden' name='DCSext.wtLiabilityType'	id='DCSextwtLiabilityType'	webtrendTagAttr='true'	value='CONS'/>
 
 
 
@@ -4081,26 +3077,27 @@ document.getElementById("cltCookieURL").innerHTML = innerHTML;
 
 
 
-
-
-<!-- Page Name should be after execution of WebtrendReporting -->
-
-	<meta name="DCSext.wtPN" content='Dashboard Pg' escapeXml="false"/>
-
-
-	<script>
-	   // the below block of code is very important; it clears all the prototype
-	   // javascript functions that otherwise get added as webtrends query paramaters
-		if (window.webTrendTag_unprototype) webTrendTag_unprototype();
-	</script>
-	<script src="//www.att.com/webtrends/scripts/dcs_tag.js" type="text/javascript"></script>
-
-<script language="JavaScript" type="text/JavaScript">
-jQuery(document).ready(function() {
-jQuery('#secondary-content div:first-child').css('margin-top','0px');
-});
-</script>
-
+		
+		<!-- Page Name should be after execution of WebtrendReporting -->
+		
+			<meta name="DCSext.wtPN" content='Dashboard Pg' escapeXml="false"/>
+		
+		
+			<script>
+			   // the below block of code is very important; it clears all the prototype
+			   // javascript functions that otherwise get added as webtrends query paramaters
+				if (window.webTrendTag_unprototype) webTrendTag_unprototype();
+			</script>
+			<script src="//www.att.com/webtrends/scripts/dcs_tag.js" type="text/javascript"></script>
+		
+		<script language="JavaScript" type="text/JavaScript">
+		jQuery(document).ready(function() {
+		jQuery('#secondary-content div:first-child').css('margin-top','0px');
+		});
+		</script>
+	
+	
+	
 	<!-- /CE FOOTER -->
 		</div>
 		
