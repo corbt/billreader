@@ -1,6 +1,10 @@
+#!/bin/sh
 userid=${1}
 password=${2}
 csv_filename=${3}
+
+echo $userid
+echo $password
 
 curl --cookie-jar cjar --output firstpageoutput.html \
 https://www.att.com/olam/loginAction.olamexecute
@@ -12,7 +16,7 @@ curl --cookie cjar --cookie-jar cjar \
 https://myattp1w85.att.com/commonLogin/igate_wam/multiLogin.do
 
 curl --cookie cjar \
---output $csv_filename.csv \
+--output $csv_filename \
 https://www.att.com/pmt/jsp/mypayment/viewbill/download_csv/download_csv.jsp?reportActionEvent=A_VB_WIRELESS_DETAILS_DOWNLOAD_CSV_SUBMIT
 
 

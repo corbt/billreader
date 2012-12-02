@@ -4,4 +4,4 @@
 local_settings.py
 localsetup
 logs
-billreader/data/userdata/*
+billreader/data/*

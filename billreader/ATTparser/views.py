@@ -1,24 +1,31 @@
 # Create your views here.
 from django.contrib.auth.models import User
 from django.http import HttpResponse
-from ATTparser import parser, models
-from ATTparser import tasks
+from ATTparser import models, retriever, parser
+#from ATTparser import tasks
 import os
 
 def loaddata(request, username):
-    #models.reset_db()
+    models.reset_db()
+    
     try:
         current_user = User.objects.get(username__exact=username)
     except User.DoesNotExist:
         return HttpResponse("Error: user \""+username+"\" not found in the database")
 
     
-    if 'DOTCLOUD_ENVIRONMENT' in os.environ:
-        parser.read_in_bill.delay("/home/dotcloud/current/billreader/"+username+".csv", current_user)
-    else:
-        parser.read_in_bill.delay("/home/kyle/proj/bill_reader/web/billreader/"+username+".csv", current_user)
+    retriever.get_bill(current_user, debug=True)
+    #parser.read_in_bill.delay("/home/kyle/proj/bill_reader/web/billreader/"+username+".csv", current_user)
 
-    #tasks.async_parse.delay("vincebill.csv", current_user)
+    '''
+    if 'DOTCLOUD_ENVIRONMENT' in os.environ:
+        retriever.get_bill(current_user)
+        #parser.read_in_bill.delay("/home/dotcloud/current/billreader/"+username+".csv", current_user)
+    else:
+        #retriever.get_bill(current_user)
+        #parser.read_in_bill.delay("/home/kyle/proj/bill_reader/web/billreader/"+username+".csv", current_user)
+        pass
+    '''
 
     return HttpResponse("Processing bill for "+username)
     
