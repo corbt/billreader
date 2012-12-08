@@ -12,7 +12,12 @@ curl --cookie cjar --cookie-jar cjar \
 --output loginresult.html \
 https://myattp1w85.att.com/commonLogin/igate_wam/multiLogin.do
 
-curl --cookie cjar -w "%{http_code}\n" --output $csv_filename \
+response=$(curl --cookie cjar -w "%{http_code}\n" --output $csv_filename \
+https://www.att.com/pmt/jsp/mypayment/viewbill/download_csv/download_csv.jsp?reportActionEvent=A_VB_WIRELESS_DETAILS_DOWNLOAD_CSV_SUBMIT)
+
+if [ $response -ne 200 ]; then
+	rm $csv_filename
+fi
+
+curl --cookie cjar -w "%{http_code}\n" --output /dev/null \
 https://www.att.com/pmt/jsp/mypayment/viewbill/download_csv/download_csv.jsp?reportActionEvent=A_VB_WIRELESS_DETAILS_DOWNLOAD_CSV_SUBMIT
-
-
